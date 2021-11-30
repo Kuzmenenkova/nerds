@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Разметка NЁRDS</title>
+	<link rel="icon" href="favicon.ico">
+</head>
+<body>
+<header>
+	<nav>
+		<a href="index.html"><img src="https://via.placeholder.com/160x65" width="160" height="65" alt="Логотип дизайн-студии NЁRDS"></a>
+		<ul>
+			<li><a href="blank.html">Студия</a></li>
+			<li><a href="blank.html">Клиенты</a></li>
+			<li><a>Магазин</a></li>
+			<li><a href="blank.html">Контакты</a></li>
+		</ul>
+		<a><img src="img/cart-icon@2x.png" alt="Корзина" width="15" height="15">Корзина</a>
+	</nav>
+</header>
+<main>
+	<h1>Магазин готовых шаблонов</h1>
+	<section>
+		<h2>Фильтр</h2>
+		<form method="post" action="https://echo.htmlacademy.ru">
+			<fieldset>
+				<legend>Стоимость</legend>
+				<input type="range" name="range" min="0" max="150000" step="10" value="107000">
+				<!-- для импутов нужны имена, имена позволяют у сервера узнать что за данные переданы -->
+				от <input type="text" name="ot" value="0">
+				до <input type="text" name="do" value="150000">
+			</fieldset>
+			<fieldset>
+				<legend>Сетка</legend>
+				<ul>
+					<li>
+						<label>
+							<input type="radio" name="grid" value="adaptive" checked>
+							Адаптивная <!-- для импутов нужны значения -->
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="grid" value="fix">
+							Фиксирванная
+						</label></li>
+					<li>
+						<label>
+							<input type="radio" name="grid" value="rubber">
+							Резиновая
+						</label></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Особенности</legend>
+				<ul><!-- пример, разобранный наставником сделан с параграфами ( у меня список). наставник сказал, что параграфы перебор. видимо можно сделать просто лэйблы -->
+					<li>
+						<label>
+							<input type="checkbox" name="slider" checked>
+							Слайдер
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" name="advantage">
+							Блок преимуществ
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" name="news" checked>
+							Новости
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" name="gallery">
+							Галерея
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" name="cart">
+							Корзина
+						</label>
+					</li>
+				</ul>
+			</fieldset>
+			<button type="submit">Показать</button>
+		</form>
+	</section>
+	<section>
+		<h2>Сортировка</h2>
+		<p>Сортировать:</p> <!-- Сортировку можно выделить в отдельную секцию -->
+		<ul>
+			<li>
+				<a href="#">По типу</a>
+			</li>
+			<li>
+				<a href="#">По цене</a>
+			</li>
+			<li>
+				<a href="#">По названию</a>
+			</li>
+			<li>
+				<a href="#">По убыванию</a>
+			</li>
+			<li>
+				<a href="#">По возрастанию</a>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Каталог</h2>
+		<ul><!-- У всех товаров есть описание (просто они скрыты в макете) -->
+			<li>
+				<img src="img/img-sedona.jpg" width="358" height="577" alt="Интернет-магазина Sedona">
+				<h3><a href="#">Sedona</a></h3><!-- здесь добавить ссылку, т.к. клик по карточке товара открывает модальное окно-->
+				<p>Информационный сайт <br>
+					для туристов</p>
+				<button>9 900</button>
+			</li>
+			<li>
+				<img src="img/img-pink.jpg" width="358" height="577" alt="Интернет-магазина Pink">
+				<h3><a href="#">Pink App</a></h3>
+				<p>Продуктовый лендинг<br>
+					приложения для iOS и Android</p>
+				<button>9 900</button>
+			</li>
+			<li>
+				<img src="img/img-barbershop.jpg" width="358" height="577" alt="Сайт барбершопа Бородинский">
+				<h3><a href="#">Barbershop</a></h3>
+				<p>Сайт салона красоты.<br>
+					Для мужчин, да.</p>
+				<button>9 900</button>
+			</li>
+			<li>
+				<img src="img/img-mishka.jpg" width="358" height="577" alt="Интернет-магазина Mishka">
+				<h3><a href="#">Mishka</a></h3>
+				<p>Интернет-магазин<br>
+					вязаных игрушек</p>
+				<button>9 900</button>
+			</li>
+			<li>
+				<img src="img/img-plus.jpg" width="358" height="577" alt="Лендинг курсов повышения квалификации">
+				<h3><a href="#">A Plus</a></h3>
+				<p>Лендинг курсов повышения квалификации</p>
+				<button>9 900</button>
+			</li>
+			<li>
+				<img src="img/img-kvast.jpg" width="358" height="577" alt="Сайт компании Кваст">
+				<h3><a href="#">КВАСТ</a></h3>
+				<p>Промо-сайт производителя<br>
+					крафтового кваса</p>
+				<button>9 900</button>
+			</li>
+		</ul>
+		<ul class="pagination">
+			<li>
+				<a>1</a>
+			</li>
+			<li>
+				<a href="#">2</a>
+			</li>
+			<li>
+				<a href="#">3</a>
+			</li>
+			<li>
+				<a href="#">Следующая</a>
+			</li>
+		</ul>
+	</section>
+</main>
+<footer>
+	<footer>
+		<section>
+			<h2>Контакты</h2>
+			<h3>Nёrds design studio</h3>
+			<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
+			<p><a href="tel:+78005558628">+7 800 555-86-28</a></p><!-- Телефон обернуть в ссылку -->
+			<a class="button">Напишите нам</a>
+			<!-- Тут лучше сделать ссылкой, кнопка сработает только при использовании js, а для ссылки можно сделать страничку с формой. -->
+		</section>
+		<section>
+			<h2>Давайте дружить, это выгодно!</h2>
+			<p>Скидка 10% для друзей из социальных сетей.</p>
+			<ul>
+				<li>
+					<a href="#">vk</a>
+				</li>
+				<li>
+					<a href="#">fb</a>
+				</li>
+				<li>
+					<a href="#">ins</a>
+				</li>
+			</ul>
+		</section>
+	</footer>
+</footer>
+</body>
+</html>
