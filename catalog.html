@@ -2,24 +2,33 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Магазин — NЁRDS </title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
-	<link rel="manifest" href="manifest.json">
+	<link rel="apple-touch-icon" href="img/favicons/180.png">
+	<link rel="manifest" href="manifest.webmanifest">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="header">
+<header class="main-header">
 	<nav>
 		<a href="index.html">
-			<img src="img/nerds-logo.svg" width="160" height="66" alt="Логотип дизайн-студии NЁRDS">
+			<img src="img/logo-nerds.svg" width="160" height="66" alt="Логотип дизайн-студии NЁRDS">
 		</a>
-		<ul>
-			<li><a href="blank.html">Студия</a></li>
-			<li><a href="blank.html">Клиенты</a></li>
-			<li><a>Магазин</a></li>
-			<li><a href="blank.html">Контакты</a></li>
+		<ul class="main-nav__list">
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="blank.html">Студия</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="blank.html">Клиенты</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link">Магазин</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="blank.html">Контакты</a>
+			</li>
 		</ul>
 		<a>Корзина</a>
 	</nav>
@@ -32,72 +41,54 @@
 			<fieldset>
 				<legend>Стоимость</legend>
 				<input type="range" name="range" min="0" max="150000" step="10" value="107000">
-				<!-- для импутов нужны имена, имена позволяют у сервера узнать что за данные переданы -->
-				от <input type="text" name="ot" value="0">
-				до <input type="text" name="do" value="150000">
+				от <input type="text" name="from" value="0">
+				до <input type="text" name="to" value="150000">
 			</fieldset>
 			<fieldset>
 				<legend>Сетка</legend>
-				<ul>
-					<li>
-						<label>
-							<input type="radio" name="grid" value="adaptive" checked>
-							Адаптивная <!-- для импутов нужны значения -->
-						</label>
-					</li>
-					<li>
-						<label>
-							<input type="radio" name="grid" value="fix">
-							Фиксирванная
-						</label></li>
-					<li>
-						<label>
-							<input type="radio" name="grid" value="rubber">
-							Резиновая
-						</label></li>
-				</ul>
+				<label>
+					<input type="radio" name="grid" value="adaptive" checked>
+					Адаптивная
+				</label>
+				<label>
+					<input type="radio" name="grid" value="fix">
+					Фиксирванная
+				</label>
+				<label>
+					<input type="radio" name="grid" value="rubber">
+					Резиновая
+				</label>
 			</fieldset>
 			<fieldset>
 				<legend>Особенности</legend>
-				<ul><!-- пример, разобранный наставником сделан с параграфами ( у меня список). наставник сказал, что параграфы перебор. видимо можно сделать просто лэйблы -->
-					<li>
-						<label>
-							<input type="checkbox" name="slider" checked>
-							Слайдер
-						</label>
-					</li>
-					<li>
-						<label>
-							<input type="checkbox" name="advantage">
-							Блок преимуществ
-						</label>
-					</li>
-					<li>
-						<label>
-							<input type="checkbox" name="news" checked>
-							Новости
-						</label>
-					</li>
-					<li>
-						<label>
-							<input type="checkbox" name="gallery">
-							Галерея
-						</label>
-					</li>
-					<li>
-						<label>
-							<input type="checkbox" name="cart">
-							Корзина
-						</label>
-					</li>
-				</ul>
+				<label>
+					<input type="checkbox" name="slider" checked>
+					Слайдер
+				</label>
+				<label>
+					<input type="checkbox" name="advantage">
+					Блок преимуществ
+				</label>
+				<label>
+					<input type="checkbox" name="news" checked>
+					Новости
+				</label>
+				<label>
+					<input type="checkbox" name="gallery">
+					Галерея
+				</label>
+				<label>
+					<input type="checkbox" name="cart">
+					Корзина
+				</label>
 			</fieldset>
 			<button type="submit">Показать</button>
 		</form>
 	</section>
 	<section>
 		<h2>Сортировка</h2>
-		<p>Сортировать:</p> <!-- Сортировку можно выделить в отдельную секцию -->
+		<p>Сортировать:</p>
+		<!-- Сортировку можно выделить в отдельную секцию -->
 		<ul>
 			<li>
 				<a href="#">По типу</a>
@@ -118,11 +109,10 @@
 	</section>
 	<section>
 		<h2>Каталог</h2>
-		<ul><!-- Для товаров изображения ВАЖНЫ, поэтому необходимо пересохранить картинки
-		 из макета в формате png-->
+		<ul>
 			<li>
 				<img src="img/clients/sedona.png" width="358" height="577" alt="Интернет-магазина Sedona">
-				<h3><a href="#">Sedona</a></h3><!-- здесь добавить ссылку, т.к. клик по карточке товара открывает модальное окно-->
+				<h3><a href="#">Sedona</a></h3>
 				<p>Информационный сайт <br>
 					для туристов</p>
 				<button>9 900</button>
@@ -178,32 +168,31 @@
 		</ul>
 	</section>
 </main>
-<footer>
-	<footer>
-		<section>
-			<h2>Контакты</h2>
-			<h3>Nёrds design studio</h3>
-			<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
-			<p><a href="tel:+78005558628">+7 800 555-86-28</a></p><!-- Телефон обернуть в ссылку -->
-			<a class="button">Напишите нам</a>
-			<!-- Тут лучше сделать ссылкой, кнопка сработает только при использовании js, а для ссылки можно сделать страничку с формой. -->
-		</section>
-		<section>
-			<h2>Давайте дружить, это выгодно!</h2>
-			<p>Скидка 10% для друзей из социальных сетей.</p>
-			<ul>
-				<li>
-					<a href="#">vk</a>
-				</li>
-				<li>
-					<a href="#">fb</a>
-				</li>
-				<li>
-					<a href="#">ins</a>
-				</li>
-			</ul>
-		</section>
-	</footer>
+<footer class="main-footer">
+	<section>
+		<h2>Контакты</h2>
+		<h3>Nёrds design studio</h3>
+		<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
+		<p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+		<a class="button">Напишите нам</a>
+	</section>
+	<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
+	<section>
+		<h2>Мы в соц сетях</h2>
+		<p>Давайте дружить, это выгодно!</p>
+		<p>Скидка 10% для друзей из социальных сетей.</p>
+		<ul>
+			<li>
+				<a href="#">vk</a>
+			</li>
+			<li>
+				<a href="#">fb</a>
+			</li>
+			<li>
+				<a href="#">ins</a>
+			</li>
+		</ul>
+	</section>
 </footer>
 </body>
 </html>

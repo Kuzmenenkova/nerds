@@ -2,15 +2,16 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Главная страница — NЁRDS </title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
-	<link rel="manifest" href="manifest.json">
+	<link rel="apple-touch-icon" href="img/favicons/180.png">
+	<link rel="manifest" href="manifest.webmanifest">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="header">
+<header class="main-header">
 	<nav class="main-nav">
 		<a>
 			<img src="img/logo-nerds.svg" width="160" height="66" alt="Логотип дизайн-студии NЁRDS">
@@ -33,7 +34,7 @@
 	</nav>
 </header>
 <main class="main">
-	<h1>Студия дизайна «Нёрдс»</h1>
+	<h1>Интернет магазин «Nёrds»</h1>
 	<section class="slider">
 		<h2>Преимущества</h2>
 		<article>
@@ -77,25 +78,18 @@
 	<section>
 		<h2>Услуги</h2>
 		<ul>
-			<!-- осознаные названия картинкам
-
-			Если картинка не добавляет информации - её можно сделать декоративной и сделать через css
-				-->
 			<li>
-				<img src="img/illustration-1.png" alt="Ноутбук" width="300" height="146">
 				<h3>Веб-сайты</h3>
 				<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
 				<button>Заказать</button>
 			</li>
 			<li>
-				<img src="img/illustration-2.png" alt="Айфон и андроид" width="300" height="146">
 				<h3>Приложения</h3>
 				<p>Покорите топ-10 приложений <br>
 					в AppStore и Google Play</p>
 				<button>Заказать</button>
 			</li>
 			<li>
-				<img src="img/illustration-3.png" alt="Доска с графиками" width="300" height="146">
 				<h3>Презентации</h3>
 				<p>Вы даже не подозреваете, <br>
 					насколько вы изумительны!</p>
@@ -156,26 +150,28 @@
 		<ul>
 			<li>
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<!-- можно убрать префикс logo это и так понятно
-
-					добавить ссылки логотипам
-				-->
-					<img src="img/partners/logo-htmlacademy.png" alt="Логотип HtmlAcademy" width="199" height="58">
+					<img src="img/partners/htmlacademy.png" alt="Логотип HtmlAcademy" width="199" height="58">
 				</a>
 			</li>
 			<li>
-				<img src="img/partners/logo-borodinski.png" alt="Логотип барбершопа Бородинский" width="209" height="90">
+				<a href="#">
+					<img src="img/partners/borodinski.png" alt="Логотип барбершопа Бородинский" width="209" height="90">
+				</a>
 			</li>
 			<li>
-				<img src="img/partners/logo-pink.png" alt="Логотип компании Pink" width="185" height="52">
+				<a href="#">
+					<img src="img/partners/pink.png" alt="Логотип компании Pink" width="185" height="52">
+				</a>
 			</li>
 			<li>
-				<img src="img/partners/logo-mishka.png" alt="Логотип интернет-магазины Мишка" width="173" height="84">
+				<a href="#">
+					<img src="img/partners/mishka.png" alt="Логотип интернет-магазины Мишка" width="173" height="84">
+				</a>
 			</li>
 		</ul>
 	</section>
 </main>
-<footer>
+<footer class="main-footer">
 	<section>
 		<h2>Контакты</h2>
 		<h3>Nёrds design studio</h3>
@@ -185,15 +181,12 @@
 	</section>
 	<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
 	<section>
-		<h2>Давайте дружить, это выгодно!</h2>
+		<h2>Мы в соц сетях</h2>
+		<p>Давайте дружить, это выгодно!</p>
 		<p>Скидка 10% для друзей из социальных сетей.</p>
 		<ul>
 			<li>
 				<a href="#">vk</a>
-				<!-- картинки соц сетей подготовлены дизайнером для выгрузки в векторе,
-				переделать в вектор
-				иконка корзины тоже svg
-				-->
 			</li>
 			<li>
 				<a href="#">fb</a>
@@ -204,7 +197,7 @@
 		</ul>
 	</section>
 </footer>
-<section>
+<div>
 	<h2>Напишите нам</h2>
 	<button class="close">Закрыть</button>
 	<form>
@@ -226,6 +219,6 @@
 			<button type="submit">Отправить</button>
 		</div>
 	</form>
-</section>
+</div>
 </body>
 </html>
