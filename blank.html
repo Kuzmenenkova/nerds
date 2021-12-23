@@ -8,10 +8,11 @@
 	<link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="img/favicons/180.png">
 	<link rel="manifest" href="manifest.webmanifest">
+	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
-<body class="page-body">
-<header class="main-header">
+<body class="body">
+<header class="header">
 	<nav class="main-nav">
 		<a class="main-header__logo" href="index.html">
 			<img src="img/logo-nerds.svg" width="160" height="66" alt="Логотип дизайн-студии NЁRDS">
@@ -37,10 +38,10 @@
 	<h1 class="visually-hidden">Интернет магазин «Nёrds»</h1>
 	blank
 </main>
-<footer class="main-footer">
+<footer class="footer">
 	<section class="contact-card">
 		<h2 class="visually-hidden">Контакты</h2>
-		<h3 class="headline main-footer__title">Nёrds design studio</h3>
+		<h3 class="title-uppercase">Nёrds design studio</h3>
 		<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
 		<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
 		<a class="button">Напишите нам</a>
@@ -48,17 +49,17 @@
 	<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
 	<section>
 		<h2 class="visually-hidden">Мы в соц сетях</h2>
-		<p class="headline">Давайте дружить, это выгодно!</p>
+		<p class="title-uppercase footer__title">Давайте дружить, это выгодно!</p>
 		<p>Скидка 10% для друзей из социальных сетей.</p>
-		<ul>
-			<li>
-				<a href="#">vk</a>
+		<ul class="social-networks-list">
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">vk</a>
 			</li>
-			<li>
-				<a href="#">fb</a>
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">fb</a>
 			</li>
-			<li>
-				<a href="#">ins</a>
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">ins</a>
 			</li>
 		</ul>
 	</section>

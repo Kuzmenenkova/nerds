@@ -8,10 +8,11 @@
 	<link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="img/favicons/180.png">
 	<link rel="manifest" href="manifest.webmanifest">
+	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
-<body class="page-body">
-<header class="main-header">
+<body class="body">
+<header class="header">
 	<nav class="main-nav">
 		<a class="main-header__logo" href="index.html">
 			<img src="img/logo-nerds.svg" width="160" height="66" alt="Логотип дизайн-студии NЁRDS">
@@ -24,7 +25,7 @@
 				<a class="main-nav__link" href="blank.html">Клиенты</a>
 			</li>
 			<li class="main-nav__item">
-				<a class="main-nav__link" href="catalog.html">Магазин</a>
+				<a class="main-nav__link current" href="catalog.html">Магазин</a>
 			</li>
 			<li class="main-nav__item">
 				<a class="main-nav__link" href="blank.html">Контакты</a>
@@ -34,18 +35,20 @@
 	</nav>
 </header>
 <main class="main">
-	<h1>Магазин готовых шаблонов</h1>
+	<section>
+		<h1>Магазин готовых шаблонов</h1>
+	</section>
 	<section class="filter">
 		<h2 class="visually-hidden">Фильтр</h2>
 		<form class="form-filter" method="post" action="https://echo.htmlacademy.ru">
 			<fieldset>
-				<legend class="headline ">Стоимость</legend>
+				<legend class="catalog-title title-uppercase">Стоимость</legend>
 				<input type="range" name="range" min="0" max="150000" step="10" value="107000">
 				от <input type="text" name="from" value="0">
 				до <input type="text" name="to" value="150000">
 			</fieldset>
 			<fieldset>
-				<legend class="headline ">Сетка</legend>
+				<legend class="catalog-title title-uppercase">Сетка</legend>
 				<label>
 					<input type="radio" name="grid" value="adaptive" checked>
 					Адаптивная
@@ -60,7 +63,7 @@
 				</label>
 			</fieldset>
 			<fieldset>
-				<legend class="headline ">Особенности</legend>
+				<legend class="catalog-title title-uppercase">Особенности</legend>
 				<label>
 					<input type="checkbox" name="slider" checked>
 					Слайдер
@@ -82,95 +85,95 @@
 					Корзина
 				</label>
 			</fieldset>
-			<button class="button form-filter__button" type="submit">Показать</button>
+			<button class="button button--grey" type="submit">Показать</button>
 		</form>
 	</section>
 	<section class="sort">
 		<h2 class="visually-hidden">Сортировка</h2>
-		<p class="headline ">Сортировать:</p>
-		<ul>
+		<p class="catalog-title title-uppercase">Сортировать:</p>
+		<ul class="sort-list">
 			<li>
-				<a href="#">По типу</a>
+				<a href="#" class="sort__link current">По цене</a>
 			</li>
 			<li>
-				<a href="#">По цене</a>
+				<a href="#" class="sort__link">По типу</a>
 			</li>
 			<li>
-				<a href="#">По названию</a>
+				<a href="#" class="sort__link">По названию</a>
 			</li>
 			<li>
-				<a href="#">По убыванию</a>
+				<a href="#" class="sort__link down">По убыванию</a>
 			</li>
 			<li>
-				<a href="#">По возрастанию</a>
+				<a href="#" class="sort__link up">По возрастанию</a>
 			</li>
 		</ul>
 	</section>
 	<section class="catalog">
 		<h2 class="visually-hidden">Каталог</h2>
-		<ul>
-			<li>
+		<ul class="catalog-list">
+			<li class="catalog-item card">
 				<img src="img/clients/sedona.png" width="358" height="577" alt="Интернет-магазина Sedona">
-				<h3 class="title-uppercase"><a href="#">Sedona</a></h3>
+				<h3 class="card-title title-uppercase"><a href="#">Sedona</a></h3>
 				<p>Информационный сайт <br>
 					для туристов</p>
-				<button class="button">9 900 ₽</button>
+				<button class="button" type="button">9 900 ₽</button>
 			</li>
-			<li>
+			<li class="catalog-item card">
 				<img src="img/clients/pink.png" width="358" height="577" alt="Интернет-магазина Pink">
 				<h3 class="title-uppercase"><a href="#">Pink App</a></h3>
 				<p>Продуктовый лендинг<br>
 					приложения для iOS и Android</p>
-				<button class="button">9 900 ₽</button>
+				<button class="button" type="button">9 900 ₽</button>
 			</li>
-			<li>
+			<li class="catalog-item card">
 				<img src="img/clients/barbershop.png" width="358" height="577" alt="Сайт барбершопа Бородинский">
-				<h3 class="title-uppercase"><a href="#">Barbershop</a></h3>
+				<h3 class="card-title title-uppercase"><a href="#">Barbershop</a></h3>
 				<p>Сайт салона красоты.<br>
 					Для мужчин, да.</p>
-				<button class="button">9 900 ₽</button>
+				<button class="button" type="button">9 900 ₽</button>
 			</li>
-			<li>
+			<li class="catalog-item card">
 				<img src="img/clients/mishka.png" width="358" height="577" alt="Интернет-магазина Mishka">
-				<h3 class="title-uppercase"><a href="#">Mishka</a></h3>
+				<h3 class="card-title title-uppercase"><a href="#">Mishka</a></h3>
 				<p>Интернет-магазин<br>
 					вязаных игрушек</p>
-				<button class="button">9 900 ₽</button>
+				<button class="button" type="button">9 900 ₽</button>
 			</li>
-			<li>
+			<li class="catalog-item card">
 				<img src="img/clients/aplus.png" width="358" height="577" alt="Лендинг курсов повышения квалификации">
-				<h3 class="title-uppercase"><a href="#">A Plus</a></h3>
+				<h3 class="card-title title-uppercase"><a href="#">A Plus</a></h3>
 				<p>Лендинг курсов повышения квалификации</p>
-				<button class="button">9 900 ₽</button>
+				<button class="button" type="button">9 900 ₽</button>
 			</li>
-			<li>
+			<li class="catalog-item card">
 				<img src="img/clients/kvast.png" width="358" height="577" alt="Сайт компании Кваст">
-				<h3 class="title-uppercase"><a href="#">КВАСТ</a></h3>
+				<h3 class="card-title title-uppercase"><a href="#">КВАСТ</a></h3>
 				<p>Промо-сайт производителя<br>
 					крафтового кваса</p>
-				<button class="button">9 900 ₽</button>
+				<button class="button" type="button">9 900 ₽</button>
 			</li>
 		</ul>
 		<ul class="pagination">
 			<li>
-				<a>1</a>
+				<a class="pagination__link">1</a>
 			</li>
 			<li>
-				<a href="#">2</a>
+				<a class="pagination__link" href="#">2</a>
 			</li>
 			<li>
-				<a href="#">3</a>
+				<a class="pagination__link" href="#">3</a>
 			</li>
 			<li>
-				<a href="#">Следующая</a>
+				<a class="button button--grey" href="#">Следующая</a>
 			</li>
 		</ul>
 	</section>
 </main>
-<footer class="main-footer">
+<footer class="footer">
 	<section class="contact-card">
 		<h2 class="visually-hidden">Контакты</h2>
-		<h3 class="headline main-footer__title">Nёrds design studio</h3>
+		<h3 class="title-uppercase">Nёrds design studio</h3>
 		<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
 		<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
 		<a class="button">Напишите нам</a>
@@ -178,41 +181,47 @@
 	<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
 	<section>
 		<h2 class="visually-hidden">Мы в соц сетях</h2>
-		<p class="headline">Давайте дружить, это выгодно!</p>
+		<p class="footer__title">Давайте дружить, это выгодно!</p>
 		<p>Скидка 10% для друзей из социальных сетей.</p>
-		<ul>
-			<li>
-				<a href="#">vk</a>
+		<ul class="social-networks-list">
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/vk.svg" alt="">
+				</a>
 			</li>
-			<li>
-				<a href="#">fb</a>
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/fb.svg" alt="">
+				</a>
 			</li>
-			<li>
-				<a href="#">ins</a>
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/inst.svg" alt="">
+				</a>
 			</li>
 		</ul>
 	</section>
 </footer>
-<div>
-	<h2>Напишите нам</h2>
-	<button class="close">Закрыть</button>
+<div class="modal">
+	<h2 class="modal__title">Напишите нам</h2>
+	<button class="close" type="button">Закрыть</button>
 	<form>
 		<div>
-			<label for="form-name">
+			<label class="modal__label" for="form-name">
 				Ваше имя:
-				<input id="form-name" type="text" placeholder="Имя Фамилия">
+				<input id="form-name" class="modal__input" type="text" placeholder="Имя Фамилия">
 			</label>
-			<label for="form-email">
+			<label class="modal__label" for="form-email">
 				Ваш email:
-				<input id="form-email" type="email" placeholder="email@example.com">
+				<input id="form-email" class="modal__input error" type="email" placeholder="email@example.com" value="error">
 			</label>
 		</div>
 		<div>
-			<label for="form-textarea">
+			<label class="modal__label" for="form-textarea">
 				Текст письма:
-				<textarea id="form-textarea" placeholder="В свободной форме"></textarea>
+				<textarea id="form-textarea" class="modal__textarea" placeholder="В свободной форме"></textarea>
 			</label>
-			<button type="submit">Отправить</button>
+			<button class="button" type="submit">Отправить</button>
 		</div>
 	</form>
 </div>

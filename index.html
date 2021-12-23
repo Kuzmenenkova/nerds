@@ -8,10 +8,11 @@
 	<link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="img/favicons/180.png">
 	<link rel="manifest" href="manifest.webmanifest">
+	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
-<body class="page-body">
-<header class="main-header">
+<body class="body">
+<header class="header">
 	<nav class="main-nav">
 		<a class="main-header__logo">
 			<img src="img/logo-nerds.svg" width="160" height="66" alt="Логотип дизайн-студии NЁRDS">
@@ -30,7 +31,7 @@
 				<a class="main-nav__link" href="blank.html">Контакты</a>
 			</li>
 		</ul>
-		<a class="main-nav__cart">Корзина</a>
+		<a class="main-nav__cart" href="blank.html">Корзина</a>
 	</nav>
 </header>
 <main class="main">
@@ -38,66 +39,66 @@
 	<section class="slider">
 		<h2 class="visually-hidden">Преимущества</h2>
 		<article>
-			<h3 class="headline slider__title">Долго, дорого, скурпулезно.</h3>
+			<h3 class="slider__title">Долго, дорого, скурпулезно.</h3>
 			<p>Математически выверенный дизайн <br>
 				для вашего сайта или мобильного приложения.</p>
-			<a href="#" class="button">Узнать больше</a>
+			<a href="#" class="button button-slider">Узнать больше</a>
 			<img src="img/slide-1.jpg" alt="Три телефона" width="760" height="431">
 		</article>
 		<article>
-			<h3 class="headline slider__title">Любим математику <br>
+			<h3 class="slider__title">Любим математику <br>
 				как никто другой</h3>
 			<p>Никакого креатива, только математические формулы<br>
 				для расчета идеальных пропорций</p>
-			<a href="#" class="button">Узнать больше</a>
+			<a href="#" class="button button-slider">Узнать больше</a>
 			<img src="img/slide-2.jpg" alt="Два монитора" width="760" height="431">
 		</article>
 		<article>
-			<h3 class="headline slider__title">Только ночь,<br>
+			<h3 class="slider__title">Только ночь,<br>
 				только хардкор</h3>
 			<p>Работать днем, как все? Мы против этого.<br>
 				Ближе к полуночи работа только начинается.</p>
-			<a href="#" class="button">Узнать больше</a>
+			<a href="#" class="button button-slider">Узнать больше</a>
 			<img src="img/slide-3.jpg" alt="Два планшета" width="760" height="431">
 		</article>
-		<ul>
-			<li>
-				<a>1</a>
+		<ul class="slider__pagination-list pagination">
+			<li class="pagination__item">
+				<a class="pagination__link">1</a>
 			</li>
-			<li>
-				<a href="#">2</a>
+			<li class="pagination__item">
+				<a class="pagination__link" href="#">2</a>
 			</li>
-			<li>
-				<a href="#">3</a>
+			<li class="pagination__item">
+				<a class="pagination__link" href="#">3</a>
 			</li>
 		</ul>
 	</section>
-	<section>
+	<section class="service">
 		<h2 class="visually-hidden">Услуги</h2>
 		<ul>
 			<li>
-				<h3 class="headline title-uppercase">Веб-сайты</h3>
+				<h3 class="title-uppercase service__title">Веб-сайты</h3>
 				<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-				<button class="button">Заказать</button>
+				<button class="button" type="button">Заказать</button>
 			</li>
 			<li>
-				<h3 class="headline title-uppercase">Приложения</h3>
+				<h3 class="title-uppercase service__title">Приложения</h3>
 				<p>Покорите топ-10 приложений <br>
 					в AppStore и Google Play</p>
-				<button class="button">Заказать</button>
+				<button class="button button--green" type="button">Заказать</button>
 			</li>
 			<li>
-				<h3 class="headline title-uppercase">Презентации</h3>
+				<h3 class="title-uppercase service__title">Презентации</h3>
 				<p>Вы даже не подозреваете, <br>
 					насколько вы изумительны!</p>
-				<button class="button">Заказать</button>
+				<button class="button button--yellow" type="button">Заказать</button>
 			</li>
 		</ul>
 	</section>
 	<section class="about">
 		<h2 class="visually-hidden">О компании</h2>
 		<div>
-			<p class="headline about__title">Мы — маленькая, но гордая<br>
+			<p class="about__title">Мы — маленькая, но гордая<br>
 				дизайн-студия из Краснодара.</p>
 			<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
 				превыше креатива. Работаем не покладая рук, как роботы.</p>
@@ -147,31 +148,31 @@
 		<ul>
 			<li>
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="img/partners/htmlacademy.png" alt="Логотип HtmlAcademy" width="199" height="58">
+					<img class="clients__img" src="img/partners/htmlacademy.png" alt="Логотип HtmlAcademy" width="199" height="58">
 				</a>
 			</li>
 			<li>
 				<a href="#">
-					<img src="img/partners/borodinski.png" alt="Логотип барбершопа Бородинский" width="209" height="90">
+					<img class="clients__img" src="img/partners/borodinski.png" alt="Логотип барбершопа Бородинский" width="209" height="90">
 				</a>
 			</li>
 			<li>
 				<a href="#">
-					<img src="img/partners/pink.png" alt="Логотип компании Pink" width="185" height="52">
+					<img class="clients__img" src="img/partners/pink.png" alt="Логотип компании Pink" width="185" height="52">
 				</a>
 			</li>
 			<li>
 				<a href="#">
-					<img src="img/partners/mishka.png" alt="Логотип интернет-магазины Мишка" width="173" height="84">
+					<img class="clients__img" src="img/partners/mishka.png" alt="Логотип интернет-магазины Мишка" width="173" height="84">
 				</a>
 			</li>
 		</ul>
 	</section>
 </main>
-<footer class="main-footer">
+<footer class="footer">
 	<section class="contact-card">
 		<h2 class="visually-hidden">Контакты</h2>
-		<h3 class="headline main-footer__title">Nёrds design studio</h3>
+		<h3 class="title-uppercase">Nёrds design studio</h3>
 		<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
 		<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
 		<a class="button">Напишите нам</a>
@@ -179,41 +180,47 @@
 	<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
 	<section>
 		<h2 class="visually-hidden">Мы в соц сетях</h2>
-		<p class="headline">Давайте дружить, это выгодно!</p>
+		<p class="footer__title">Давайте дружить, это выгодно!</p>
 		<p>Скидка 10% для друзей из социальных сетей.</p>
-		<ul>
-			<li>
-				<a href="#">vk</a>
+		<ul class="social-networks-list">
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/vk.svg" alt="">
+				</a>
 			</li>
-			<li>
-				<a href="#">fb</a>
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/fb.svg" alt="">
+				</a>
 			</li>
-			<li>
-				<a href="#">ins</a>
+			<li class="social-networks__item">
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/inst.svg" alt="">
+				</a>
 			</li>
 		</ul>
 	</section>
 </footer>
-<div>
-	<h2>Напишите нам</h2>
-	<button class="close">Закрыть</button>
+<div class="modal">
+	<h2 class="modal__title">Напишите нам</h2>
+	<button class="close" type="button">Закрыть</button>
 	<form>
 		<div>
-			<label for="form-name">
+			<label class="modal__label" for="form-name">
 				Ваше имя:
-				<input id="form-name" type="text" placeholder="Имя Фамилия">
+				<input id="form-name" class="modal__input" type="text" placeholder="Имя Фамилия">
 			</label>
-			<label for="form-email">
+			<label class="modal__label" for="form-email">
 				Ваш email:
-				<input id="form-email" type="email" placeholder="email@example.com">
+				<input id="form-email" class="modal__input error" type="email" placeholder="email@example.com" value="error">
 			</label>
 		</div>
 		<div>
-			<label for="form-textarea">
+			<label class="modal__label" for="form-textarea">
 				Текст письма:
-				<textarea id="form-textarea" placeholder="В свободной форме"></textarea>
+				<textarea id="form-textarea" class="modal__textarea" placeholder="В свободной форме"></textarea>
 			</label>
-			<button type="submit">Отправить</button>
+			<button class="button" type="submit">Отправить</button>
 		</div>
 	</form>
 </div>
