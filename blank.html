@@ -12,34 +12,43 @@
 </head>
 <body class="page-body">
 <header class="main-header">
-	<nav class="main-navigation">
-		<a class="main-header-logo" href="index.html">
+	<nav class="main-nav">
+		<a class="main-header__logo" href="index.html">
 			<img src="img/logo-nerds.svg" width="160" height="66" alt="Логотип дизайн-студии NЁRDS">
 		</a>
-		<ul class="site-navigation">
-			<li><a href="blank.html">Студия</a></li>
-			<li><a href="blank.html">Клиенты</a></li>
-			<li><a href="catalog.html">Магазин</a></li>
-			<li><a href="blank.html">Контакты</a></li>
+		<ul class="main-nav__list">
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="blank.html">Студия</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="blank.html">Клиенты</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="catalog.html">Магазин</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="blank.html">Контакты</a>
+			</li>
 		</ul>
-		<a class="main-navigation-cart">Корзина</a>
+		<a class="main-nav__cart">Корзина</a>
 	</nav>
 </header>
-<main>
-blank
+<main class="main">
+	<h1 class="visually-hidden">Интернет магазин «Nёrds»</h1>
+	blank
 </main>
 <footer class="main-footer">
-	<section>
-		<h2>Контакты</h2>
-		<h3>Nёrds design studio</h3>
+	<section class="contact-card">
+		<h2 class="visually-hidden">Контакты</h2>
+		<h3 class="headline main-footer__title">Nёrds design studio</h3>
 		<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
-		<p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+		<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
 		<a class="button">Напишите нам</a>
 	</section>
 	<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
 	<section>
-		<h2>Мы в соц сетях</h2>
-		<p>Давайте дружить, это выгодно!</p>
+		<h2 class="visually-hidden">Мы в соц сетях</h2>
+		<p class="headline">Давайте дружить, это выгодно!</p>
 		<p>Скидка 10% для друзей из социальных сетей.</p>
 		<ul>
 			<li>
@@ -54,5 +63,28 @@ blank
 		</ul>
 	</section>
 </footer>
+<div>
+	<h2>Напишите нам</h2>
+	<button class="close">Закрыть</button>
+	<form>
+		<div>
+			<label for="form-name">
+				Ваше имя:
+				<input id="form-name" type="text" placeholder="Имя Фамилия">
+			</label>
+			<label for="form-email">
+				Ваш email:
+				<input id="form-email" type="email" placeholder="email@example.com">
+			</label>
+		</div>
+		<div>
+			<label for="form-textarea">
+				Текст письма:
+				<textarea id="form-textarea" placeholder="В свободной форме"></textarea>
+			</label>
+			<button type="submit">Отправить</button>
+		</div>
+	</form>
+</div>
 </body>
 </html>
