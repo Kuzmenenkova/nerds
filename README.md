@@ -1,2 +1,2 @@
 # nerds
-Это учебный проект от htmlacademy
+Это учебный проект от <a href="https://htmlacademy.ru/">htmlacademy</a>
