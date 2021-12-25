@@ -35,55 +35,72 @@
 	</nav>
 </header>
 <main class="main">
-	<h1 class="visually-hidden">Интернет магазин «Nёrds»</h1>
-	blank
+	<section>
+		<h1 class="visually-hidden">Интернет магазин «Nёrds»</h1>
+	</section>
+	<div class="wrapper">
+		content
+
+	</div>
 </main>
 <footer class="footer">
-	<section class="contact-card">
-		<h2 class="visually-hidden">Контакты</h2>
-		<h3 class="title-uppercase">Nёrds design studio</h3>
-		<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
-		<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
-		<a class="button">Напишите нам</a>
+	<section class="map">
+		<div class="wrapper">
+			<div class="contact-card">
+				<h2 class="visually-hidden">Контакты</h2>
+				<h3 class="title-uppercase">Nёrds design studio</h3>
+				<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
+				<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
+				<a class="button">Напишите нам</a>
+			</div>
+			<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
+		</div>
 	</section>
-	<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
-	<section>
+	<section class="social-networks">
 		<h2 class="visually-hidden">Мы в соц сетях</h2>
-		<p class="title-uppercase footer__title">Давайте дружить, это выгодно!</p>
-		<p>Скидка 10% для друзей из социальных сетей.</p>
-		<ul class="social-networks-list">
+		<ul class="social-networks__list">
 			<li class="social-networks__item">
-				<a class="social-networks__link" href="#">vk</a>
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/vk.svg" alt="">
+				</a>
 			</li>
 			<li class="social-networks__item">
-				<a class="social-networks__link" href="#">fb</a>
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/fb.svg" alt="">
+				</a>
 			</li>
 			<li class="social-networks__item">
-				<a class="social-networks__link" href="#">ins</a>
+				<a class="social-networks__link" href="#">
+					<img src="img/icons/inst.svg" alt="">
+				</a>
 			</li>
 		</ul>
+		<div class="footer__text">
+			<p class="footer__title">Давайте дружить, это выгодно!</p>
+			<p>Скидка 10% для друзей из социальных сетей.</p>
+		</div>
 	</section>
 </footer>
-<div>
-	<h2>Напишите нам</h2>
-	<button class="close">Закрыть</button>
+<div class="modal">
+	<h2 class="modal__title">Напишите нам</h2>
+	<button class="close" type="button">Закрыть</button>
 	<form>
 		<div>
-			<label for="form-name">
+			<label class="modal__label" for="form-name">
 				Ваше имя:
-				<input id="form-name" type="text" placeholder="Имя Фамилия">
+				<input id="form-name" class="modal__input" type="text" placeholder="Имя Фамилия">
 			</label>
-			<label for="form-email">
+			<label class="modal__label" for="form-email">
 				Ваш email:
-				<input id="form-email" type="email" placeholder="email@example.com">
+				<input id="form-email" class="modal__input error" type="email" placeholder="email@example.com" value="error">
 			</label>
 		</div>
 		<div>
-			<label for="form-textarea">
+			<label class="modal__label" for="form-textarea">
 				Текст письма:
-				<textarea id="form-textarea" placeholder="В свободной форме"></textarea>
+				<textarea id="form-textarea" class="modal__textarea" placeholder="В свободной форме"></textarea>
 			</label>
-			<button type="submit">Отправить</button>
+			<button class="button" type="submit">Отправить</button>
 		</div>
 	</form>
 </div>
