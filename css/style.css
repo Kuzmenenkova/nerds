@@ -476,17 +476,17 @@
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
-    color: var(--black);
+    color: var(--black-color);
     margin: 0;
 }
 
 .contact-card {
-    color: var(--grey-700);
+    color: var(--grey-color);
     line-height: 18px;
 }
 
 .contact-card__link {
-    color: var(--grey-700);
+    color: var(--grey-color);
     text-decoration: none;
 }
 
