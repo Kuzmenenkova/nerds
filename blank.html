@@ -13,7 +13,7 @@
 </head>
 <body class="body">
 <header class="header">
-	<nav class="main-nav">
+	<nav class="main-nav wrapper">
 		<a class="main-header__logo" href="index.html">
 			<img src="img/logo-nerds.svg" width="160" height="66" alt="Логотип дизайн-студии NЁRDS">
 		</a>
@@ -31,14 +31,15 @@
 				<a class="main-nav__link" href="blank.html">Контакты</a>
 			</li>
 		</ul>
-		<a class="main-nav__cart">Корзина</a>
+		<a class="main-nav__cart" href="blank.html">Корзина</a>
 	</nav>
 </header>
 <main class="main">
-	<section>
-		<h1 class="visually-hidden">Интернет магазин «Nёrds»</h1>
+	<section class="main-header">
+			<h1 class="visually-hidden">Магазин готовых шаблонов</h1>
 	</section>
 	<div class="wrapper">
+		content
 	</div>
 </main>
 <footer class="footer">
@@ -46,33 +47,37 @@
 		<div class="wrapper">
 			<div class="contact-card">
 				<h2 class="visually-hidden">Контакты</h2>
-				<h3 class="title-uppercase">Nёrds design studio</h3>
-				<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
-				<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
+				<address>
+					<h3 class="title-uppercase">Nёrds design studio</h3>
+					<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
+					<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
+				</address>
 				<a class="button">Напишите нам</a>
 			</div>
-			<img src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
+			<img class="balloon" src="img/map-marker.png" alt="Мы здесь: Санкт-Петербург, наб. Реки Карповки,5 лит П" width="231" height="190">
 		</div>
 	</section>
-	<section class="social-networks">
-		<h2 class="visually-hidden">Мы в соц сетях</h2>
-		<ul class="social-networks__list">
-			<li class="social-networks__item">
-				<a class="social-networks__link" href="#">
-					<img src="img/icons/vk.svg" alt="">
-				</a>
-			</li>
-			<li class="social-networks__item">
-				<a class="social-networks__link" href="#">
-					<img src="img/icons/fb.svg" alt="">
-				</a>
-			</li>
-			<li class="social-networks__item">
-				<a class="social-networks__link" href="#">
-					<img src="img/icons/inst.svg" alt="">
-				</a>
-			</li>
-		</ul>
+	<section class="social-networks wrapper">
+		<address>
+			<h2 class="visually-hidden">Мы в соц сетях</h2>
+			<ul class="social-networks__list">
+				<li class="social-networks__item">
+					<a class="social-networks__link" href="#">
+						<img src="img/icons/vk.svg" alt="">
+					</a>
+				</li>
+				<li class="social-networks__item">
+					<a class="social-networks__link" href="#">
+						<img src="img/icons/fb.svg" alt="">
+					</a>
+				</li>
+				<li class="social-networks__item">
+					<a class="social-networks__link" href="#">
+						<img src="img/icons/inst.svg" alt="">
+					</a>
+				</li>
+			</ul>
+		</address>
 		<div class="footer__text">
 			<p class="footer__title">Давайте дружить, это выгодно!</p>
 			<p>Скидка 10% для друзей из социальных сетей.</p>
