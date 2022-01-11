@@ -316,11 +316,11 @@ p {
 }
 
 .slider__item {
-    display: none;
+    display: grid;
+    grid-template-columns: 420px 1fr;
 }
 
 .slider__item.current {
-    display: block;
 }
 
 .slider__title {
@@ -333,6 +333,11 @@ p {
 
 .slider__text {
     margin: 0 0 28px;
+    grid-row: 2/3;
+}
+
+.slider__button {
+    grid-row: 3/4;
 }
 
 .slider__figure {
@@ -348,6 +353,9 @@ p {
 
 .slider__figure {
     height: 431px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    margin: 0;
 }
 
 .slider__figure img {
@@ -388,15 +396,18 @@ p {
 
 /* service */
 .service__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0 0 40px;
+    justify-content: space-between;
 }
 
 .service__item {
+    flex-basis: 300px;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .service__img {
@@ -405,6 +416,10 @@ p {
 
 .service__text {
     margin-bottom: 32px;
+}
+
+.service__button {
+    margin-top: auto;
 }
 
 /* about */
