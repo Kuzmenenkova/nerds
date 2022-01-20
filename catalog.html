@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta id="viewport" content="width=device-width, initial-scale=1">
-	<title>Каталог — NЁRDS </title>
+	<title>Каталог — NЁRDS</title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -31,7 +31,9 @@
 				<a class="main-nav__link" href="blank.html">Контакты</a>
 			</li>
 		</ul>
-		<a class="main-nav__cart" href="blank.html">Корзина</a>
+		<div class="main-nav__cart">
+			<a href="blank.html">Корзина</a>
+		</div>
 	</nav>
 </header>
 <main class="main">
@@ -44,36 +46,49 @@
 			<form class="form-filter" method="post" action="https://echo.htmlacademy.ru">
 				<fieldset>
 					<legend class="catalog-title title-uppercase">Стоимость</legend>
-					<div class="range-wrapper">
-						<input class="range" type="range" id="range" min="0" max="150000" step="10" value="100000">
+					<div class="range-controls">
+						<div class="toggle-wrapper">
+							<div class="scale">
+								<div class="bar" style="
+                width: 30%;
+                margin-left: 20%
+              "></div>
+							</div>
+							<div class="toggle toggle-min" tabindex="0" style="
+              left: 20%
+            "></div>
+							<div class="toggle toggle-max" tabindex="0" style="
+              left: 50%
+            "></div>
+						</div>
 					</div>
 					<div class="filter-price">
-						<label class="filter-price__label" for="from">от
-							<input class="filter-price__input" type="text" id="from" value="0">
+						<label class="filter-price__label">от
+							<input class="filter-price__input" type="number" name="min-price" min="0" max="999" value="0">
 						</label>
-						<label class="filter-price__label" for="to">до
-							<input class="filter-price__input" type="text" id="to" value="150000">
+						<label class="filter-price__label">до
+							<input class="filter-price__input" type="number" name="max-price" min="1000" max="150000" value="150000">
 						</label>
 					</div>
 				</fieldset>
 				<fieldset>
 					<legend class="title-uppercase">Сетка</legend>
 					<ul class="filter__list" role="none">
-						<li>
-							<label>
-								<input type="radio" name="grid" value="adaptive" checked>
+						<li class="filter-radio">
+							<input class="visually-hidden" type="radio" name="grid" value="adaptive" id="grid-adaptive" checked disabled>
+							<label for="grid-adaptive" class="filter__label">
 								Адаптивная
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="radio" name="grid" value="fix">
+						<li class="filter-radio">
+							<input class="visually-hidden" type="radio" name="grid" value="fix" id="grid-fix">
+							<label for="grid-fix" class="filter__label">
 								Фиксирванная
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="radio" name="grid" value="rubber">
+						<li class="filter-radio">
+							<input class="visually-hidden" type="radio" name="grid" value="rubber" id="grid-rubber">
+							<label for="grid-rubber" class="filter__label">
 								Резиновая
 							</label>
 						</li>
@@ -82,33 +97,33 @@
 				<fieldset>
 					<legend class="title-uppercase">Особенности</legend>
 					<ul class="filter__list" role="none">
-						<li>
-							<label>
-								<input type="checkbox" id="slider" checked>
+						<li class="filter-checkbox">
+							<input class="visually-hidden" type="checkbox" id="filter-slider" checked>
+							<label for="filter-slider" class="filter__label">
 								Слайдер
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" id="advantage">
+						<li class="filter-checkbox">
+							<input class="visually-hidden" type="checkbox" id="filter-advantage">
+							<label for="filter-advantage" class="filter__label">
 								Блок преимуществ
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" id="news" checked>
+						<li class="filter-checkbox">
+							<input class="visually-hidden" type="checkbox" id="filter-news" checked disabled>
+							<label for="filter-news" class="filter__label">
 								Новости
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" id="gallery">
+						<li class="filter-checkbox">
+							<input class="visually-hidden" type="checkbox" id="filter-gallery">
+							<label for="filter-gallery" class="filter__label">
 								Галерея
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" id="cart">
+						<li class="filter-checkbox">
+							<input class="visually-hidden" type="checkbox" id="filter-cart">
+							<label for="filter-cart" class="filter__label">
 								Корзина
 							</label>
 						</li>
