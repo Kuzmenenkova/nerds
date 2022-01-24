@@ -270,27 +270,30 @@
 	</section>
 </footer>
 <div class="modal">
-	<h2 class="modal__title">Напишите нам</h2>
-	<button class="close" type="button">Закрыть</button>
-	<form>
-		<div>
-			<label class="modal__label" for="form-id">
+	<header class="modal-head">
+		<h2 class="modal__title">Напишите нам</h2>
+		<button class="close" type="button">Закрыть</button>
+	</header>
+	<form action="https://echo.htmlacademy.ru/">
+		<fieldset>
+			<label class="modal__label" for="form-name">
 				Ваше имя:
-				<input id="form-id" class="modal__input" type="text" placeholder="Имя Фамилия">
+				<input id="form-name" class="modal__input" type="text" placeholder="Имя Фамилия">
 			</label>
 			<label class="modal__label" for="form-email">
 				Ваш email:
-				<input id="form-email" class="modal__input error" type="email" placeholder="email@example.com" value="error">
+				<input id="form-email" class="modal__input" type="email" placeholder="email@example.com" value="">
 			</label>
-		</div>
-		<div>
+		</fieldset>
+		<fieldset>
 			<label class="modal__label" for="form-textarea">
 				Текст письма:
 				<textarea id="form-textarea" class="modal__textarea" placeholder="В свободной форме"></textarea>
 			</label>
-			<button class="button" type="submit">Отправить</button>
-		</div>
+		</fieldset>
+		<button class="button modal__button" type="submit">Отправить</button>
 	</form>
 </div>
+
 </body>
 </html>
