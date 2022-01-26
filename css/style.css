@@ -98,7 +98,7 @@ p {
 .wrapper {
 	width: 1200px;
 	margin: 0 auto;
-	padding: 0 18px;
+	padding: 0 20px;
 }
 
 .header {
@@ -244,11 +244,10 @@ p {
 	display: flex;
 	justify-content: flex-end;
 	height: 69px;
-	margin: 1px 4px 0 0;
 }
 
 .main-nav__cart a {
-	padding-top: 26px;
+	padding-top: 28px;
 	display: flex;
 }
 
@@ -261,8 +260,8 @@ p {
 	display: block;
 	width: 15px;
 	height: 15px;
-	margin-top: 8px;
-	margin-right: 25px;
+	margin-top: 6px;
+	margin-right: 26px;
 	background-image: url("../img/icons/cart.svg");
 }
 
@@ -291,10 +290,18 @@ p {
 .pagination {
 	list-style: none;
 	padding: 0;
-	margin: 0 0 20px;
-	display: grid;
-	grid-template-columns: repeat(3, 50px) 1fr;
-	gap: 11px;
+	margin: 0 0 9px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.pagination li {
+	margin-right: 11px;
+	margin-bottom: 11px;
+}
+.pagination__link:last-child {
+	margin-right: 0;
+	margin-bottom: 0;
 }
 
 .pagination__link {
@@ -302,8 +309,9 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
+	min-width: 50px;
 	height: 50px;
+	padding: 0 7px;
 	background: var(--grey-100);
 	color: var(--black);
 	border-radius: 3px;
@@ -329,6 +337,10 @@ p {
 	cursor: default;
 }
 
+.pagination .button {
+	width: 260px;
+}
+
 /* slider */
 .slider {
 	background-color: var(--grey-100);
@@ -338,7 +350,7 @@ p {
 
 .slider__item {
 	display: none;
-	background-position: 397px -7px;
+	background-position: 397px bottom;
 	background-size: 760px 431px;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -361,20 +373,17 @@ p {
 	background-image: url("../img/slide-3.jpg");
 }
 
-/*
-
-*/
 .slider__title {
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 56px;
-	margin: 0 0 25px;
+	margin: 0 0 36px;
 	padding-top: 70px;
 	max-width: 550px;
 }
 
 .slider__text {
-	margin: 0 0 37px;
+	margin: 0 0 26px;
 	grid-row: 2/3;
 	line-height: 25px;
 }
@@ -406,8 +415,8 @@ p {
 .slider-controls button:hover::before,
 .slider-controls .current::before {
 	content: '';
-	width: 4px;
-	height: 4px;
+	width: 8px;
+	height: 8px;
 	top: 5px;
 	left: 5px;
 	position: absolute;
@@ -612,7 +621,7 @@ p {
 /* clients */
 .clients {
 	border-bottom: solid 2px var(--grey-100);
-	margin-bottom: 80px;
+	margin-bottom: 40px;
 }
 
 .clients__list {
@@ -669,7 +678,7 @@ p {
 .catalog-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: 36px;
+	column-gap: 40px;
 }
 
 .filter {
@@ -774,6 +783,10 @@ p {
 	outline: none;
 }
 
+.filter .title-uppercase {
+	margin-bottom: 14px;
+}
+
 .filter__list {
 	list-style: none;
 	padding: 0;
@@ -794,7 +807,8 @@ p {
 }
 
 .filter-checkbox {
-	padding-bottom: 16px;
+	padding-top: 1px;
+	padding-bottom: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -830,7 +844,7 @@ p {
 }
 
 .filter-radio {
-	padding-bottom: 15px;
+	padding-bottom: 16px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -842,8 +856,8 @@ p {
 	top: 0;
 	left: 0;
 	display: block;
-	width: 17px;
-	height: 17px;
+	width: 25px;
+	height: 25px;
 	border: 4px solid var(--grey-750);
 	border-radius: 50%;
 }
@@ -884,12 +898,8 @@ p {
 	grid-column: 2 / -1;
 }
 
-.catalog-title {
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 30px;
-	text-transform: uppercase;
-	color: var(--black);
+.sort .title-uppercase,
+fieldset:first-child .title-uppercase {
 	margin-bottom: 48px;
 }
 
@@ -916,7 +926,7 @@ p {
 	position: relative;
 }
 
-.catalog__item:nth-child(2n) {
+.card:nth-child(2n) {
 	margin-right: 0;
 }
 
@@ -987,6 +997,10 @@ p {
 
 .card img {
 	border-radius: 0 0 5px 5px;
+	width: 358px;
+	height: 578px;
+	object-fit: contain;
+	background-color: var(--grey-100);
 }
 
 .card__button {
@@ -1047,11 +1061,11 @@ p {
 
 .sort__item .up, .sort__item .down {
 	text-align: right;
-	margin-right: 3px;
+	margin-right: 0;
 }
 
 li.sort__item .down {
-	margin-right: 11px;
+	margin-right: 10px;
 }
 
 .sort__link.up,
@@ -1094,6 +1108,21 @@ li.sort__item .down {
 	justify-content: center;
 	align-items: center;
 	padding: 54px 0;
+	position: relative;
+}
+
+.map-iframe {
+	width: 100%;
+	height: 416px;
+	position: absolute;
+	border: none;
+}
+
+.map-wrapper {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .contact-card {
@@ -1102,6 +1131,7 @@ li.sort__item .down {
 	line-height: 18px;
 	padding: 49px 50px 47px;
 	width: 319px;
+	
 }
 
 .contact-card p {
@@ -1187,7 +1217,7 @@ li.sort__item .down {
 .modal {
 	display: none;
 	width: 960px;
-	padding: 63px 60px 63px 100px;
+	padding: 63px 60px 84px 100px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
