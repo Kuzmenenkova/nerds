@@ -111,7 +111,7 @@ p {
 .main-header {
 	background-color: var(--grey-100);
 	width: 100%;
-	height: 234px;
+	min-height: 234px;
 	display: grid;
 	align-items: center;
 	justify-content: center;
@@ -146,7 +146,6 @@ p {
 	margin: -1px;
 }
 
-/*ширину кнопкам лучше использовать минимальную вместо width*/
 .button {
 	font-weight: 500;
 	font-size: 16px;
@@ -187,7 +186,9 @@ p {
 	font-size: 55px;
 	line-height: 55px;
 	color: var(--black);
-	margin: 0;
+	margin: 0 auto;
+	max-width: 1000px;
+	text-align: center;
 }
 
 /* menu */
@@ -233,36 +234,32 @@ p {
 	color: var(--black);
 	text-decoration: none;
 	display: inline-block;
-	padding: 11px 0 13px;
-}
-
-.main-nav__link {
 	padding: 15px 13px;
 }
 
 .main-nav__cart {
-	display: flex;
-	justify-content: flex-end;
-	height: 69px;
+	margin-top: 13px;
 }
 
 .main-nav__cart a {
-	padding-top: 28px;
-	display: flex;
-}
-
-.main-nav__cart.current a {
-	border-bottom: solid 2px var(--red);
+	position: relative;
+	padding-left: 40px;
+	padding-right: 0;
+	float: right;
 }
 
 .main-nav__cart a::before {
 	content: '';
-	display: block;
 	width: 15px;
 	height: 15px;
-	margin-top: 6px;
-	margin-right: 26px;
+	position: absolute;
+	top: 21px;
+	left: 0;
 	background-image: url("../img/icons/cart.svg");
+}
+
+.main-nav__cart.current a {
+	border-bottom: solid 2px var(--red);
 }
 
 .main-nav__link:hover,
@@ -383,8 +380,8 @@ p {
 }
 
 .slider__text {
+	max-width: 410px;
 	margin: 0 0 26px;
-	grid-row: 2/3;
 	line-height: 25px;
 }
 
@@ -1031,21 +1028,25 @@ fieldset:first-child .title-uppercase {
 .sort__list {
 	list-style: none;
 	padding: 0;
-	margin: 1px 0 0 0;
+	margin: 1px 0 16px 0;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: flex-start;
-	min-width: 364px;
+	min-width: 360px;
 	justify-content: space-between;
 }
 
 .sort__item {
 	text-align: left;
 	padding: 2px 0 0 0;
+	margin-right: 13px;
 }
 
 .sort__item-up-down {
 	padding: 0;
+	margin-right: 0;
 	margin-left: auto;
+	min-width: 42px;
 }
 
 .sort__link {
