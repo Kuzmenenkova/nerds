@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
@@ -91,13 +98,17 @@ p {
         "content"
         "footer";
 	-ms-grid-rows:
-		min-content
+		-webkit-min-content
 		1fr
-		min-content;
+		-webkit-min-content;
 	grid-template-rows:
         -webkit-min-content
         1fr
         -webkit-min-content;
+	-ms-grid-rows:
+		min-content
+		1fr
+		min-content;
 	grid-template-rows:
         min-content
         1fr
@@ -1425,7 +1436,7 @@ li.sort__item .down {
 
 /* modal */
 .modal {
-	/*display: none;*/
+	display: none;
 	width: 960px;
 	padding: 63px 60px 84px 100px;
 	position: fixed;
@@ -1526,6 +1537,22 @@ li.sort__item .down {
 	color: var(--grey-600);
 }
 
+.modal__input::-webkit-input-placeholder, .modal__textarea::-webkit-input-placeholder {
+	color: var(--grey-600);
+}
+
+.modal__input::-moz-placeholder, .modal__textarea::-moz-placeholder {
+	color: var(--grey-600);
+}
+
+.modal__input:-ms-input-placeholder, .modal__textarea:-ms-input-placeholder {
+	color: var(--grey-600);
+}
+
+.modal__input::-ms-input-placeholder, .modal__textarea::-ms-input-placeholder {
+	color: var(--grey-600);
+}
+
 .modal__input::placeholder,
 .modal__textarea::placeholder {
 	color: var(--grey-600);
@@ -1548,6 +1575,22 @@ li.sort__item .down {
 
 .modal__input:hover::-ms-input-placeholder,
 .modal__textarea:hover::-ms-input-placeholder {
+	color: var(--grey-600);
+}
+
+.modal__input:hover::-webkit-input-placeholder, .modal__textarea:hover::-webkit-input-placeholder {
+	color: var(--grey-600);
+}
+
+.modal__input:hover::-moz-placeholder, .modal__textarea:hover::-moz-placeholder {
+	color: var(--grey-600);
+}
+
+.modal__input:hover:-ms-input-placeholder, .modal__textarea:hover:-ms-input-placeholder {
+	color: var(--grey-600);
+}
+
+.modal__input:hover::-ms-input-placeholder, .modal__textarea:hover::-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
