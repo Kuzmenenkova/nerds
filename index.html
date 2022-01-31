@@ -8,8 +8,8 @@
 	<link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="img/favicons/180.png">
 	<link rel="manifest" href="manifest.webmanifest">
-	<link href="css/normalize.min.css" rel="stylesheet">
-	<link href="css/style.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body main-page">
 <header class="header">
@@ -149,8 +149,7 @@
 			<ul class="clients__list">
 				<li class="clients__item">
 					<a class="clients__link" href="https://htmlacademy.ru/intensive/htmlcss">
-						<img class="clients__img" src="img/partners/htmlacademy.png" alt="Логотип HtmlAcademy" width="199"
-								 height="58">
+						<img class="clients__img" src="img/partners/htmlacademy.png" alt="Логотип HtmlAcademy" width="199" height="58">
 					</a>
 				</li>
 				<li class="clients__item">
@@ -183,9 +182,9 @@
 				<h3 class="title-uppercase contact__title">Nёrds design studio</h3>
 				<address>
 					<p>наб. Реки Карповки, <br>5 лит П, Санкт-Петербург</p>
-					<p><a class="contact-card__link" href="tel:+78005558628">+7 800 555-86-28</a></p>
+					<p><a class="contact-card__link" href="tel:+78005558628" aria-label="Позвонить в NЁRDS">+7 800 555-86-28</a></p>
 				</address>
-				<a class="button">Напишите нам</a>
+				<a href="blank.html" class="button">Напишите нам</a>
 			</div>
 		</div>
 	</section>
@@ -194,17 +193,17 @@
 		<address>
 			<ul class="social-networks__list">
 				<li class="social-networks__item">
-					<a class="social-networks__link" href="#">
+					<a class="social-networks__link" href="#" aria-label="Мы в контакте">
 						<img src="img/icons/vk.svg" alt="">
 					</a>
 				</li>
 				<li class="social-networks__item">
-					<a class="social-networks__link" href="#">
+					<a class="social-networks__link" href="#" aria-label="Мы в facebook">
 						<img src="img/icons/fb.svg" alt="">
 					</a>
 				</li>
 				<li class="social-networks__item">
-					<a class="social-networks__link" href="#">
+					<a class="social-networks__link" href="#" aria-label="Мы в instagram">
 						<img src="img/icons/inst.svg" alt="">
 					</a>
 				</li>
@@ -221,21 +220,21 @@
 		<h2 class="modal__title">Напишите нам</h2>
 		<button class="close" type="button" aria-label="Закрыть"></button>
 	</header>
-	<form action="https://echo.htmlacademy.ru/">
+	<form action="https://echo.htmlacademy.ru" method="post">
 		<fieldset>
 			<label class="modal__label" for="form-name">
 				Ваше имя:
-				<input id="form-name" class="modal__input" type="text" placeholder="Имя Фамилия">
+				<input id="form-name" name="form-name" class="modal__input" type="text" placeholder="Имя Фамилия">
 			</label>
 			<label class="modal__label" for="form-email">
 				Ваш email:
-				<input id="form-email" class="modal__input" type="email" placeholder="email@example.com" value="">
+				<input id="form-email" name="form-email" class="modal__input" type="email" placeholder="email@example.com" value="">
 			</label>
 		</fieldset>
 		<fieldset>
 			<label class="modal__label" for="form-textarea">
 				Текст письма:
-				<textarea id="form-textarea" class="modal__textarea" placeholder="В свободной форме"></textarea>
+				<textarea id="form-textarea" name="form-textarea" class="modal__textarea" placeholder="В свободной форме"></textarea>
 			</label>
 		</fieldset>
 		<button class="button modal__button" type="submit">Отправить</button>

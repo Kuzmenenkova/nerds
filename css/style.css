@@ -164,9 +164,9 @@ p {
 }
 
 .button {
-	font-weight: 500;
 	font-size: 16px;
 	line-height: 18px;
+	font-weight: 500;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: var(--white, #ffffff);
@@ -306,6 +306,12 @@ p {
 .main-nav__link:active,
 .main-nav__cart a:active {
 	color: var(--grey-550);
+}
+
+.main-nav__link:focus,
+.main-nav__cart a:focus {
+	color: var(--red);
+	outline: none;
 }
 
 .main-nav__link.current {
@@ -1306,7 +1312,6 @@ li.sort__item .down {
 	line-height: 18px;
 	padding: 49px 50px 47px;
 	width: 319px;
-	
 }
 
 .contact-card p {
@@ -1324,6 +1329,18 @@ li.sort__item .down {
 	padding: 10px 0;
 	margin-top: 9px;
 	margin-bottom: 26px;
+}
+
+.contact-card__link:hover {
+	color: var(--red);}
+
+.contact-card__link:focus {
+	color: var(--red);
+	outline: none;
+}
+
+.contact-card__link:active {
+	color: var(--grey-550);
 }
 
 .balloon {
@@ -1391,6 +1408,11 @@ li.sort__item .down {
 	background-color: var(--red-hover);
 }
 
+.social-networks__link:focus {
+	outline: none;
+	background-color: var(--red-hover);
+}
+
 .social-networks__link:active {
 	background-color: var(--red-active);
 	-webkit-box-shadow: inset 0 3px 0 var(--grey-250);
@@ -1403,7 +1425,7 @@ li.sort__item .down {
 
 /* modal */
 .modal {
-	display: none;
+	/*display: none;*/
 	width: 960px;
 	padding: 63px 60px 84px 100px;
 	position: fixed;
@@ -1499,7 +1521,8 @@ li.sort__item .down {
 	color: var(--grey-600);
 }
 
-.modal__input::-ms-input-placeholder, .modal__textarea::-ms-input-placeholder {
+.modal__input::-ms-input-placeholder,
+.modal__textarea::-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
@@ -1508,19 +1531,23 @@ li.sort__item .down {
 	color: var(--grey-600);
 }
 
-.modal__input:hover::-webkit-input-placeholder, .modal__textarea:hover::-webkit-input-placeholder {
+.modal__input:hover::-webkit-input-placeholder,
+.modal__textarea:hover::-webkit-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:hover::-moz-placeholder, .modal__textarea:hover::-moz-placeholder {
+.modal__input:hover::-moz-placeholder,
+.modal__textarea:hover::-moz-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:hover:-ms-input-placeholder, .modal__textarea:hover:-ms-input-placeholder {
+.modal__input:hover:-ms-input-placeholder,
+.modal__textarea:hover:-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:hover::-ms-input-placeholder, .modal__textarea:hover::-ms-input-placeholder {
+.modal__input:hover::-ms-input-placeholder,
+.modal__textarea:hover::-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
