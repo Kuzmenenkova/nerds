@@ -4,12 +4,10 @@ const close = modal.querySelector('.close');
 
 buttonOpen.addEventListener('click', function (evt) {
   evt.preventDefault(); //отмена поведения по умолчанию evt.preventDefault();
-  // console.log('');
   modal.classList.add('modal--show');
-
 });
 
-close.addEventListener('click', function () {
-  // console.log('');
+close.addEventListener('click', function (evt) {
+  evt.preventDefault(); //отмена поведения по умолчанию evt.preventDefault();
   modal.classList.remove('modal--show'); //нажата кнопка "Закрыть"
 });
