@@ -1495,6 +1495,11 @@ li.sort__item .down {
 
 .modal--show {
 	display: block;
+	animation: bounce 0.6s;
+}
+
+.modal--error {
+	animation: shake 0.6s;
 }
 
 .modal-head {
@@ -1533,7 +1538,7 @@ li.sort__item .down {
 }
 
 .modal__input,
-.modal__textarea {
+.modal__text {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	border: solid 2px var(--grey-300);
@@ -1544,126 +1549,141 @@ li.sort__item .down {
 	margin: 9px 0 16px;
 }
 
-.modal__textarea {
+.modal__text {
 	min-width: 760px;
 	min-height: 118px;
 	resize: none;
 }
 
 .modal__input:hover,
-.modal__textarea:hover {
+.modal__text:hover {
 	border-color: var(--grey-500);
 }
 
 .modal__input:focus,
-.modal__textarea:focus {
+.modal__text:focus {
 	border-color: var(--black);
 	outline: none;
 }
 
 .modal__input.error,
-.modal__textarea.error {
+.modal__text.error {
 	color: var(--red-hover);
 	border-color: var(--red-hover);
 }
 
-.modal__input::-webkit-input-placeholder, .modal__textarea::-webkit-input-placeholder {
+.modal__input::-webkit-input-placeholder,
+.modal__text::-webkit-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input::-moz-placeholder, .modal__textarea::-moz-placeholder {
+.modal__input::-moz-placeholder,
+.modal__text::-moz-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:-ms-input-placeholder, .modal__textarea:-ms-input-placeholder {
+.modal__input:-ms-input-placeholder,
+.modal__text:-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
 .modal__input::-ms-input-placeholder,
-.modal__textarea::-ms-input-placeholder {
+.modal__text::-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input::-webkit-input-placeholder, .modal__textarea::-webkit-input-placeholder {
+.modal__input::-webkit-input-placeholder, 
+.modal__text::-webkit-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input::-moz-placeholder, .modal__textarea::-moz-placeholder {
+.modal__input::-moz-placeholder, 
+.modal__text::-moz-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:-ms-input-placeholder, .modal__textarea:-ms-input-placeholder {
+.modal__input:-ms-input-placeholder,
+.modal__text:-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input::-ms-input-placeholder, .modal__textarea::-ms-input-placeholder {
+.modal__input::-ms-input-placeholder,
+.modal__text::-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
 .modal__input::placeholder,
-.modal__textarea::placeholder {
+.modal__text::placeholder {
 	color: var(--grey-600);
 }
 
 .modal__input:hover::-webkit-input-placeholder,
-.modal__textarea:hover::-webkit-input-placeholder {
+.modal__text:hover::-webkit-input-placeholder {
 	color: var(--grey-600);
 }
 
 .modal__input:hover::-moz-placeholder,
-.modal__textarea:hover::-moz-placeholder {
+.modal__text:hover::-moz-placeholder {
 	color: var(--grey-600);
 }
 
 .modal__input:hover:-ms-input-placeholder,
-.modal__textarea:hover:-ms-input-placeholder {
+.modal__text:hover:-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
 .modal__input:hover::-ms-input-placeholder,
-.modal__textarea:hover::-ms-input-placeholder {
+.modal__text:hover::-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:hover::-webkit-input-placeholder, .modal__textarea:hover::-webkit-input-placeholder {
+.modal__input:hover::-webkit-input-placeholder,
+.modal__text:hover::-webkit-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:hover::-moz-placeholder, .modal__textarea:hover::-moz-placeholder {
+.modal__input:hover::-moz-placeholder,
+.modal__text:hover::-moz-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:hover:-ms-input-placeholder, .modal__textarea:hover:-ms-input-placeholder {
+.modal__input:hover:-ms-input-placeholder,
+.modal__text:hover:-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:hover::-ms-input-placeholder, .modal__textarea:hover::-ms-input-placeholder {
+.modal__input:hover::-ms-input-placeholder,
+.modal__text:hover::-ms-input-placeholder {
 	color: var(--grey-600);
 }
 
 .modal__input:hover::placeholder,
-.modal__textarea:hover::placeholder {
+.modal__text:hover::placeholder {
 	color: var(--grey-600);
 }
 
-.modal__input:focus::-webkit-input-placeholder, .modal__textarea:focus::-webkit-input-placeholder {
+.modal__input:focus::-webkit-input-placeholder,
+.modal__text:focus::-webkit-input-placeholder {
 	color: var(--grey-800);
 }
 
-.modal__input:focus::-moz-placeholder, .modal__textarea:focus::-moz-placeholder {
+.modal__input:focus::-moz-placeholder,
+.modal__text:focus::-moz-placeholder {
 	color: var(--grey-800);
 }
 
-.modal__input:focus:-ms-input-placeholder, .modal__textarea:focus:-ms-input-placeholder {
+.modal__input:focus:-ms-input-placeholder,
+.modal__text:focus:-ms-input-placeholder {
 	color: var(--grey-800);
 }
 
-.modal__input:focus::-ms-input-placeholder, .modal__textarea:focus::-ms-input-placeholder {
+.modal__input:focus::-ms-input-placeholder,
+.modal__text:focus::-ms-input-placeholder {
 	color: var(--grey-800);
 }
 
 .modal__input:focus::placeholder,
-.modal__textarea:focus::placeholder {
+.modal__text:focus::placeholder {
 	color: var(--grey-800);
 }
 
@@ -1688,4 +1708,54 @@ li.sort__item .down {
 
 .close:active {
 	opacity: 0.1;
+}
+
+
+/* Animations */
+/*	transform: translate(-50%, -50%);
+*/
+@keyframes bounce {
+	0% {
+		top: -50%;
+		transform: translate(-100%, -50%);
+	}
+	
+	70% {
+		top: -50%;
+		transform: translate(-50%, calc(100px - 50%));
+	}
+	
+	90% {
+		top: 50%;
+		transform: translate(-50%, calc(-40px - 50%));
+	}
+	
+	100% {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+@keyframes shake {
+	0%,
+	100% {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translate(calc(-50% + 3px), -50%) rotate(-0.1deg);
+	}
+	
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translate(calc(-50% - 3px), -50%) rotate(0.1deg);
+	}
 }

@@ -175,7 +175,7 @@
 </main>
 <footer class="footer">
 	<section class="map">
-			<iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/-/CCU5a8g-wC" width="1200" height="416" frameborder="0" allowfullscreen="false" ></iframe>
+			<iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/-/CCU5a8g-wC" width="1200" height="416" frameborder="0" allowfullscreen="true" ></iframe>
 		<div class="wrapper map-wrapper">
 			<div class="contact-card">
 				<h2 class="visually-hidden">Контакты</h2>
@@ -220,21 +220,21 @@
 		<h2 class="modal__title">Напишите нам</h2>
 		<button class="close" type="button" aria-label="Закрыть"></button>
 	</header>
-	<form action="https://echo.htmlacademy.ru" method="post">
+	<form class="feedback" action="https://echo.htmlacademy.ru" method="post">
 		<fieldset>
 			<label class="modal__label" for="form-name">
 				Ваше имя:
-				<input id="form-name" name="form-name" class="modal__input" type="text" placeholder="Имя Фамилия" required>
+				<input id="form-name" name="form-name" class="modal__input" type="text" placeholder="Имя Фамилия">
 			</label>
 			<label class="modal__label" for="form-email">
 				Ваш email:
-				<input id="form-email" name="form-email" class="modal__input" type="email" placeholder="email@example.com" required>
+				<input id="form-email" name="form-email" class="modal__input" type="email" placeholder="email@example.com">
 			</label>
 		</fieldset>
 		<fieldset>
-			<label class="modal__label" for="form-textarea">
+			<label class="modal__label" for="form-text">
 				Текст письма:
-				<textarea id="form-textarea" name="form-textarea" class="modal__textarea" placeholder="В свободной форме" required></textarea>
+				<textarea id="form-text" name="form-text" class="modal__text" placeholder="В свободной форме"></textarea>
 			</label>
 		</fieldset>
 		<button class="button modal__button" type="submit">Отправить</button>
