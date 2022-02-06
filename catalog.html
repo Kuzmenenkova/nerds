@@ -268,31 +268,31 @@
 		</div>
 	</section>
 </footer>
-<div class="modal">
+<section class="modal">
 	<header class="modal-head">
 		<h2 class="modal__title">Напишите нам</h2>
 		<button class="close" type="button" aria-label="Закрыть"></button>
 	</header>
-	<form action="https://echo.htmlacademy.ru" method="post">
+	<form class="feedback" action="https://echo.htmlacademy.ru" method="post">
 		<fieldset>
 			<label class="modal__label" for="form-name">
 				Ваше имя:
-				<input id="form-name" name="form-name" class="modal__input" type="text" placeholder="Имя Фамилия" required>
+				<input id="form-name" name="form-name" class="modal__input" type="text" placeholder="Имя Фамилия">
 			</label>
 			<label class="modal__label" for="form-email">
 				Ваш email:
-				<input id="form-email" name="form-email" class="modal__input" type="email" placeholder="email@example.com" required>
+				<input id="form-email" name="form-email" class="modal__input" type="email" placeholder="email@example.com">
 			</label>
 		</fieldset>
 		<fieldset>
-			<label class="modal__label" for="form-textarea">
+			<label class="modal__label" for="form-text">
 				Текст письма:
-				<textarea id="form-textarea" name="form-textarea" class="modal__textarea" placeholder="В свободной форме" required></textarea>
+				<textarea id="form-text" name="form-text" class="modal__text" placeholder="В свободной форме"></textarea>
 			</label>
 		</fieldset>
 		<button class="button modal__button" type="submit">Отправить</button>
 	</form>
-</div>
+</section>
 <script src="js/script.min.js"></script>
 </body>
 </html>
