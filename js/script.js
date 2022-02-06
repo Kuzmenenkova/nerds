@@ -18,7 +18,7 @@ try {
 buttonOpen.addEventListener('click', function (evt) {
   evt.preventDefault(); //отмена поведения по умолчанию evt.preventDefault();
   modal.classList.add('modal--show');
-
+  modal.classList.remove('modal--close');
   if (storage) {
     formName.value = storage;
     formEmail.focus();
@@ -29,9 +29,11 @@ buttonOpen.addEventListener('click', function (evt) {
 
 close.addEventListener('click', function (evt) {
   evt.preventDefault(); //отмена поведения по умолчанию evt.preventDefault();
-  modal.classList.remove('modal--show'); //нажата кнопка "Закрыть"
+  modal.classList.remove('modal--show');
   modal.classList.remove('modal--error');
-
+  modal.classList.remove('modal--close');
+  modal.offsetWidth = modal.offsetWidth;
+  modal.classList.add('modal--close');
 });
 
 formFeedback.addEventListener('submit', function (evt) {
@@ -55,6 +57,9 @@ window.addEventListener('keydown', function (evt) {
       evt.preventDefault();
       modal.classList.remove('modal--show');
       modal.classList.remove('modal--error');
+      // modal.classList.remove('modal--close');
+      // modal.offsetWidth = modal.offsetWidth;
+      modal.classList.add('modal--close');
     }
   }
 });
